@@ -12,7 +12,7 @@
 
 //*1. Catch the html element with id drumkit: */
 
-const drumkit = document.getElementById("drumkit")
+const drumkit = document.getElementById("drumkit");
 
 
 //* ////////////////////////////////////// */
