@@ -1,5 +1,5 @@
 
-
+import { sounds } from "../data/soundsJSexample";
 //*1. Create an external JSON or js file containing information about the sounds you want to use. Import the file in here:  */
 // import referanceWord from "the location of the file" 
 // Remember: 
