@@ -1,6 +1,6 @@
 
-import { sounds } from "../data/soundsJSexample.js";
-import {soundFiles} from "../data/soundJSONexample.json"
+// import { sounds } from "../data/soundsJSexample.js";
+// import {soundFiles} from "../data/soundJSONexample.json"
 
 const whiteKeys = document.querySelectorAll(".whiteKey");
 const blackKeys = document.querySelectorAll(".blackKey");
