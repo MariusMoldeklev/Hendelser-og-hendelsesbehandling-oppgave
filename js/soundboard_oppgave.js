@@ -13,11 +13,27 @@ import {soundFiles} from "../data/soundJSONexample.json"
 
 //*1. Catch the html element with id drumkit: */
 
-const drumkit = document.getElementById("drumkit");
 const whiteKeys = document.querySelectorAll("whiteKey");
 const blackKeys = document.querySelectorAll("blackKey");
 
+blackKeys.forEach((black, index) => {
+    black.addEventListener("click", () => {
+        let sound = new Audio(`./sound/blackKeys/${index}.mp3`);
+        playSound(sound);
+    });
+});
 
+whiteKeys.forEach((white, index) =>{
+    white.addEventListener("click" , () => {
+        let sound = new Audio(`./soundw/whiteKeys/${index}.mp3`);
+    });
+});
+
+function playSound(sound) {
+    sound.pause();
+    sound.currentTime = 0;
+    sound.play()
+}
 
 //* ////////////////////////////////////// */
 
