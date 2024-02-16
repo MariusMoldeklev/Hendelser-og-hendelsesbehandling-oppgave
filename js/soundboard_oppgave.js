@@ -25,6 +25,26 @@ function playSound(sound) {
     sound.play();
 }
 
+document.addEventListener("keydown", (event) => {
+    const key = event.key.toUpperCase(); // Convert the pressed key to uppercase
+    let sound;
+
+    // Check if the pressed key corresponds to a white key
+    if (key >= 'A' && key <= 'G') {
+        const index = key.charCodeAt(0) - 'A'.charCodeAt(0);
+        sound = new Audio(`./sounds/whiteKeys/${index}.mp3`);
+    }
+    // Check if the pressed key corresponds to a black key
+    else if (key === 'S' || key === 'D' || key === 'F' || key === 'G' || key === 'H') {
+        const index = key.charCodeAt(0) - 'S'.charCodeAt(0);
+        sound = new Audio(`./sounds/blackKeys/${index}.mp3`);
+    }
+
+    // If a sound is found, play it
+    if (sound) {
+        playSound(sound);
+    }
+});
 
 //*1. Create an external JSON or js file containing information about the sounds you want to use. Import the file in here:  */
 // import referanceWord from "the location of the file" 
