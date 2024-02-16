@@ -1,6 +1,30 @@
 
 import { sounds } from "../data/soundsJSexample.js";
 import {soundFiles} from "../data/soundJSONexample.json"
+
+const whiteKeys = document.querySelectorAll("whiteKey");
+const blackKeys = document.querySelectorAll("blackKey");
+
+blackKeys.forEach((black,index) => {
+    black.addEventListener("click", () => {
+        let sound = new Audio(`./sounds/blackKeys/${index}.mp3`);
+        playSound(sound);
+    });
+});
+
+whiteKeys.forEach((white, index) =>{
+    white.addEventListener("click" , () => {
+        let sound = new Audio(`./soundw/whiteKey/${index}.mp3`);
+        playSound(sound);
+    });
+});
+
+function playSound(sound) {
+    sound.pause();
+    sound.currentTime = 0;
+    sound.play()
+}
+
 //*1. Create an external JSON or js file containing information about the sounds you want to use. Import the file in here:  */
 // import referanceWord from "the location of the file" 
 // Remember: 
@@ -12,29 +36,6 @@ import {soundFiles} from "../data/soundJSONexample.json"
 //* ////////////////////////////////////// */
 
 //*1. Catch the html element with id drumkit: */
-
-const whiteKeys = document.querySelectorAll("whiteKey");
-const blackKeys = document.querySelectorAll("blackKey");
-
-blackKeys.forEach((black, index) => {
-    black.addEventListener("click", () => {
-        let sound = new Audio(`./sound/blackKeys/${index}.mp3`);
-        playSound(sound);
-    });
-});
-
-whiteKeys.forEach((white, index) =>{
-    white.addEventListener("click" , () => {
-        let sound = new Audio(`./soundw/whiteKeys/${index}.mp3`);
-    });
-});
-
-function playSound(sound) {
-    sound.pause();
-    sound.currentTime = 0;
-    sound.play()
-}
-
 //* ////////////////////////////////////// */
 
 //*2. Write a console log for the fetched sounds so you know how the structure is and how you can use it */
@@ -47,11 +48,11 @@ function playSound(sound) {
 
 //3.1. make a variable that creates a button element with .createElement
 
-    // add textContent to the created buttonElement. Textcontent should be either the file name and/or key needed to be pressed
+// add textContent to the created buttonElement. Textcontent should be either the file name and/or key needed to be pressed
 
 //3.2. make a variables that create an audio element with .createElement 
-    //the audio element that is created should have the src equal to the file source
-    //the audio element that is created should have the id equal to the textcontent created in 3.1.
+//the audio element that is created should have the src equal to the file source
+//the audio element that is created should have the id equal to the textcontent created in 3.1.
 
 //3.3. add an eventlistner to the whole page that: 
     //actives when pressing a keyboard key (first parameter of the eventlistener)

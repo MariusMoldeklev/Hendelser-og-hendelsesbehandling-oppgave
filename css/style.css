@@ -6,7 +6,7 @@
   }
   
   html {
-    background: #9568e4;
+    background: #827597;
     height: 100vh;
   }
   
@@ -14,8 +14,8 @@
     display: flex;
     width: 90vw;
     height: 57vh;
-    border: 10px solid #000634;
-    border-radius: 1rem;s
+    border: 10px solid #050d44;
+    border-radius: 1rem;
     margin: 0 auto;
     position: relative;
     padding: 1rem;
@@ -69,56 +69,56 @@
     left: 87px;
   }
   
-  .black4 {
+  .black3 {
     left: 169px;
   }
   
-  .black5 {
+  .black4 {
     left: 210px;
   }
-  .black6 {
+  .black5 {
     left: 251px;
   }
   
-  .black8 {
+  .black6 {
     left: 333px;
   }
-  .black9 {
+  .black7 {
     left: 374px;
   }
   
-  .black11 {
+  .black8 {
     left: 456px;
   }
   
-  .black12 {
+  .black9 {
     left: 497px;
   }
   
-  .black13 {
+  .black10 {
     left: 538px;
   }
-  .black15 {
+  .black11 {
     left: 620px;
   }
   
-  .black16 {
+  .black12 {
     left: 661px;
   }
   
-  .black18 {
+  .black13 {
     left: 743px;
   }
   
-  .black19 {
+  .black14 {
     left: 784px;
   }
   
-  .black20 {
+  .black15 {
     left: 825px;
   }
   
-  .blackKeys:hover {
+  .blackKey:hover {
     background: linear-gradient(
       180deg,
       rgba(36, 32, 30, 1) 26%,
@@ -128,7 +128,7 @@
     transform: translateY(20px);
   }
   
-  .blackKeys:active {
+  .blackKey:active {
     background: linear-gradient(
       180deg,
       rgba(36, 32, 30, 1) 26%,
