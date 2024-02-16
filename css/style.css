@@ -46,7 +46,7 @@
     transform: rotate3d(1, 0, 0, 20deg);
   }
   
-  .blackKeys {
+  .blackKey {
     background: rgb(36, 32, 30);
     z-index: 1;
     background: linear-gradient(
@@ -61,60 +61,60 @@
     transition: 0.2s all;
   }
   
-  .black-1 {
+  .black1 {
     left: 46px;
   }
   
-  .black-2 {
+  .black2 {
     left: 87px;
   }
   
-  .black-4 {
+  .black4 {
     left: 169px;
   }
   
-  .black-5 {
+  .black5 {
     left: 210px;
   }
-  .black-6 {
+  .black6 {
     left: 251px;
   }
   
-  .black-8 {
+  .black8 {
     left: 333px;
   }
-  .black-9 {
+  .black9 {
     left: 374px;
   }
   
-  .black-11 {
+  .black11 {
     left: 456px;
   }
   
-  .black-12 {
+  .black12 {
     left: 497px;
   }
   
-  .black-13 {
+  .black13 {
     left: 538px;
   }
-  .black-15 {
+  .black15 {
     left: 620px;
   }
   
-  .black-16 {
+  .black16 {
     left: 661px;
   }
   
-  .black-18 {
+  .black18 {
     left: 743px;
   }
   
-  .black-19 {
+  .black19 {
     left: 784px;
   }
   
-  .black-20 {
+  .black20 {
     left: 825px;
   }
   
