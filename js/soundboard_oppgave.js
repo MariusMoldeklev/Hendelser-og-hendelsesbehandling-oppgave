@@ -2,19 +2,19 @@
 import { sounds } from "../data/soundsJSexample.js";
 import {soundFiles} from "../data/soundJSONexample.json"
 
-const whiteKeys = document.querySelectorAll("whiteKey");
-const blackKeys = document.querySelectorAll("blackKey");
+const whiteKeys = document.querySelectorAll(".whiteKey");
+const blackKeys = document.querySelectorAll(".blackKey");
 
-blackKeys.forEach((black,index) => {
+blackKeys.forEach((black, index) => {
     black.addEventListener("click", () => {
         let sound = new Audio(`./sounds/blackKeys/${index}.mp3`);
         playSound(sound);
     });
 });
 
-whiteKeys.forEach((white, index) =>{
-    white.addEventListener("click" , () => {
-        let sound = new Audio(`./soundw/whiteKey/${index}.mp3`);
+whiteKeys.forEach((white, index) => {
+    white.addEventListener("click", () => {
+        let sound = new Audio(`./sounds/whiteKeys/${index}.mp3`);
         playSound(sound);
     });
 });
@@ -22,8 +22,9 @@ whiteKeys.forEach((white, index) =>{
 function playSound(sound) {
     sound.pause();
     sound.currentTime = 0;
-    sound.play()
+    sound.play();
 }
+
 
 //*1. Create an external JSON or js file containing information about the sounds you want to use. Import the file in here:  */
 // import referanceWord from "the location of the file" 
