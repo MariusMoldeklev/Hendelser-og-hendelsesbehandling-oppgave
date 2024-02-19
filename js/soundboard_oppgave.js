@@ -1,7 +1,9 @@
 
-// import { sounds } from "../data/soundsJSexample.js";
+import { sounds } from "../data/soundsJSexample.js";
 // import {soundFiles} from "../data/soundJSONexample.json"
 
+
+// irriterende at jeg ikke fikk de til og bli satt opp som "A,S,D,F,G,H,J,K,L" istede ble key press alfabetisk "A,B,C,D,E,F,G++"
 const whiteKeys = document.querySelectorAll(".whiteKey");
 const blackKeys = document.querySelectorAll(".blackKey");
 
@@ -30,7 +32,7 @@ document.addEventListener("keydown", (event) => {
     let sound;
 
     // Check if the pressed key corresponds to a white key
-    if (key >= 'A' && key <= 'G') {
+    if (key >= 'A' && key <= 'Z') {
         const index = key.charCodeAt(0) - 'A'.charCodeAt(0);
         sound = new Audio(`./sounds/whiteKeys/${index}.mp3`);
     }
@@ -108,54 +110,6 @@ document.addEventListener("keydown", (event) => {
 
 
 //*4. Call on the function that loops over the sounds and creates the buttons */
-
-// create a drum component:
-const drumComponent = (sound) => {
-    // const soundRef = `${data.sounds.folder}/${sound.file}`
-    const buttonEl = document.createElement('button');
-    buttonEl.textContent = `${sound.file.slice(0, -4)}\n(${sound.key})`;
-
-    //! koden under gir heller hvilken key som skal trykkes på
-    // buttonEl.textContent = sound.key
-
-    const audioEl = document.createElement('audio');
-    // create an id for each audio element (not needed to make this work, but just for the example)
-    audioEl.id = `hotkey-${sound.key}`
-    audioEl.src = `${data.sounds.folder}/${sound.file}`
-    // audioEl.src = soundRef
-
-    buttonEl.addEventListener('focus', () => {
-        audioEl.play()
-    })
-
-    // buttonEl.addEventListener('pointerup', () => {
-    //     audioEl.pause()
-    //     audioEl.currentTime = 0
-    // })
-
-    document.addEventListener('keydown', (event) => {
-        const key = event.key.toLowerCase();
-        if (key === sound.key.toLowerCase()) {
-            audioEl.play()
-        }
-
-    })
-
-
-    document.addEventListener('keyup', () => {
-        audioEl.pause()
-        audioEl.currentTime = 0
-    })
-    drumkitContainer.append(buttonEl, audioEl)
-}
-
-const createDrumKit = () => {
-    data.sounds.soundsFiles.forEach((sound) => {
-        drumComponent(sound)
-    })
-}
-
-createDrumKit();
 
 
 
